@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title id="demo">点标记</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <style>
+        .marker {
+            color: #ff6600;
+            padding: 4px 10px;
+            border: 1px solid #fff;
+            white-space: nowrap;
+            font-size: 12px;
+            font-family: "";
+            background-color: #0066ff;
+        }
+
+    </style>
+    <script src="http://webapi.amap.com/maps?v=1.4.5&key=17c3dafb5516338e16cfa45628b08920"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<div class="button-group">
+    <input type="button" class="button" value="添加点标记覆盖物" id="addMarker"/>
+    <input type="button" class="button" value="更新点标记覆盖物" id="updateMarker"/>
+    <input type="button" class="button" value="删除点标记覆盖物" id="clearMarker"/>
+    <input type="button" class="button" value="读取数据库" id="openDatabase"/>
+</div>
+<script type="text/javascript" src="$config.templates/map.js"></script>
+<script type="text/javascript" src="$config.templates/myrequest.js"></script>
+</body>
+</html>
