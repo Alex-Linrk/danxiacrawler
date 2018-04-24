@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 from housedetail import houseinfo
 import threading
-import instertdetails
+import insertdetails
 
 headers = {"User-Agent": "User-Agent:Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0;"}
 urls = ['https://danxiafangchan.anjuke.com/gongsi-esf/tongana/a363-b310-m402/',
@@ -56,7 +56,7 @@ def houselsit(pageurl):
         houseinfo.longitude, houseinfo.latitude = geocodeG(houseinfo.houseaddress)
         houseinfo.community = details[0]
         print(houseinfo.__dict__)
-        instertdetails.intert_newdetails(houseinfo)
+        insertdetails.intert_newdetails(houseinfo)
 
 
 # 使用高德API
