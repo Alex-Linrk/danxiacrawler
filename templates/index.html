@@ -6,17 +6,56 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
     <title id="demo">点标记</title>
     <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
-    <style>
-        .marker {
-            color: #ff6600;
-            padding: 4px 10px;
-            border: 1px solid #fff;
-            white-space: nowrap;
-            font-size: 12px;
-            font-family: "";
-            background-color: #0066ff;
+
+    <style type="text/css">
+        .info div {
+            border: solid 1px silver;
         }
 
+
+        div.info-top div {
+            display: inline-block;
+            color: #333333;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 31px;
+            padding: 0 10px;
+        }
+
+        div.info-top img {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            transition-duration: 0.25s;
+        }
+
+        div.info-top img:hover {
+            box-shadow: 0px 0px 5px #000;
+        }
+
+        .info-middle div {
+            font-size: 12px;
+            padding: 6px;
+            line-height: 20px;
+            max-width: 400px;
+            max-height: 800px;
+            overflow: auto;
+        }
+
+        div.info-bottom img {
+            position: relative;
+            z-index: 104;
+        }
+
+        span {
+            margin-left: 5px;
+            font-size: 11px;
+        }
+
+        .info-middle img {
+            float: left;
+            margin-right: 6px;
+        }
     </style>
     <script src="http://webapi.amap.com/maps?v=1.4.5&key=17c3dafb5516338e16cfa45628b08920"></script>
     <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
@@ -24,9 +63,6 @@
 <body>
 <div id="container"></div>
 <div class="button-group">
-    <input type="button" class="button" value="添加点标记覆盖物" id="addMarker"/>
-    <input type="button" class="button" value="更新点标记覆盖物" id="updateMarker"/>
-    <input type="button" class="button" value="删除点标记覆盖物" id="clearMarker"/>
     <input type="button" class="button" value="读取数据库" id="openDatabase"/>
 </div>
 <script type="text/javascript" src="$config.templates/map.js"></script>

@@ -3,7 +3,7 @@
 import web
 import importlib
 import sys
-import instertdetails
+import insertdetails
 import json
 from housedetail import houseinfo
 
@@ -34,7 +34,7 @@ class Index:
 class Show:
     def GET(self):
         print('------------------')
-        return json.dumps(instertdetails.showallhouse(), cls=HouseInfoEncoder)
+        return json.dumps(insertdetails.showallhouse(), cls=HouseInfoEncoder)
 
 
 class HouseInfoEncoder(json.JSONEncoder):
